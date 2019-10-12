@@ -4,7 +4,7 @@ This Lovelace custom card displays Budapest Public Transportation (BKK) line inf
 # Lovelace Translink Card
 This Lovelace custom card displays Translink data from the public api for a given stop and route.
 
-![Preview](https://user-images.githubusercontent.com/457678/52977264-edf34980-33cc-11e9-903b-cee43b307ed8.png)
+![Preview](https://github.com/math0ne/translink-card/blob/master/translink-card.png?raw=true)
 
 ### Manual install
 1. Download and copy 'translink-card.js' into your 'config/www' directory.
@@ -18,12 +18,12 @@ resources:
 ```
 
 ###  Using the card
-Add the following lines to your ui-lovelace.yaml (entity should be the sensor of translink sensor):
+Add the following lines to your ui-lovelace.yaml (entity should be the ids of translink sensors):
 
 ```yaml
-sensor:
-  - platform: translink_sensor
-    api_key: XX
-    stop_id: 58652
-    route_number: 16
+cards:
+  - type: "custom:translink-card"
+    entities: 
+      - entity: sensor.translink_next_bus
+      - entity: sensor.translink_next_bus_2
 ```
