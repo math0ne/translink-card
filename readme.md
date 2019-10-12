@@ -1,8 +1,7 @@
-Lovelace custom card for BKK Stop Information
-This Lovelace custom card displays Budapest Public Transportation (BKK) line information departing in the near future from a configurable stop.
-
 # Lovelace Translink Card
 This Lovelace custom card displays Translink data from the public api for a given stop and route.
+
+This is designed to work with the translink sensor: https://github.com/math0ne/translink_sensor
 
 ![Preview](https://github.com/math0ne/translink-card/blob/master/translink-card.png?raw=true)
 
