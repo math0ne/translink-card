@@ -38,7 +38,7 @@ class TranslinkCard extends HTMLElement {
             .bus_times_header_countdown{
                 grid-column: span 9;
                 text-align: right;
-                margin-right: 4%;
+                margin-right: 5%;
             }
         `;
         this.appendChild(style);
@@ -57,18 +57,21 @@ class TranslinkCard extends HTMLElement {
         this.config.entities.forEach(function (item, index) {
             //console.log(hass.states[item["entity"]]);
             //console.log(item, index);
-            tmpcontent = tmpcontent + `
-                <div class="bus_times_header">
-                    <div class="bus_times_header_route">Route ${hass.states[item["entity"]].attributes.route_number}</div>
-                    <div class="bus_times_header_countdown">next in ${hass.states[item["entity"]].attributes.next_bus_countdown} min</div>
-                </div>
-                <div class="bus_times">
-                    <div class="bus_time_icon"><ha-icon icon="mdi:bus"></ha-icon></div>
-                    <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
-                    <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
-                    <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
-                </div>
-            `;
+            if(hass.states[item["entity"]].attributes.next_bus_countdown){
+                tmpcontent = tmpcontent + `
+                    <div class="bus_times_header">
+                        <div class="bus_times_header_route">Route ${hass.states[item["entity"]].attributes.route_number}</div>
+                        <div class="bus_times_header_countdown">next in ${hass.states[item["entity"]].attributes.next_bus_countdown} min</div>
+                    </div>
+                    <div class="bus_times">
+                        <div class="bus_time_icon"><ha-icon icon="mdi:bus"></ha-icon></div>
+                        <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
+                        <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
+                        <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
+                    </div>
+                `;
+            }
+
         });
 
         this.content.innerHTML = tmpcontent;
