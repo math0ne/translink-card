@@ -12,7 +12,7 @@ This is designed to work with the translink sensor: https://github.com/math0ne/t
 
 ```yaml
 resources:
-  - url: /local/translink-card.js?v=0.7.0
+  - url: /local/translink-card.js
     type: js
 ```
 
