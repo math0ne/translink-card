@@ -18,6 +18,13 @@ resources:
     type: js
 ```
 
+### HACS Custom Install
+
+1. Go to the community tab of your home assistant installation
+2. Click settings
+3. Add "https://github.com/math0ne/translink-card" with the type **Plugin**
+4. Click Save
+
 ###  Using the card
 
 Add the following lines to your ui-lovelace.yaml (entity should be the ids of translink sensors):
