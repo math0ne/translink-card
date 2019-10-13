@@ -1,3 +1,5 @@
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
+
 # Lovelace Translink Card
 This Lovelace custom card displays Translink data from the public api for a given stop and route.
 
