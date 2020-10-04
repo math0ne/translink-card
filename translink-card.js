@@ -68,8 +68,8 @@ class TranslinkCard extends HTMLElement {
                             <div class="bus_times">
                                 <div class="bus_time_icon"><ha-icon icon="mdi:bus"></ha-icon></div>
                                 <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
-                                <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
-                                <div class="bus_time">${hass.states[item["entity"]].attributes.buses_1}</div>
+                                <div class="bus_time">${hass.states[item["entity"]].attributes.buses_2}</div>
+                                <div class="bus_time">${hass.states[item["entity"]].attributes.buses_3}</div>
                             </div>
                         `;
                     }
