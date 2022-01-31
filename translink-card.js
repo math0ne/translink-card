@@ -2,7 +2,7 @@ class TranslinkCard extends HTMLElement {
     set hass(hass) {
         if (!this.content) {
         const card = document.createElement('ha-card');
-        card.header = 'Next Buses';
+        card.header = '巴士時間表';
         this.content = document.createElement('div');
         this.content.style.padding = '0 16px 16px';
         card.appendChild(this.content);
@@ -62,8 +62,8 @@ class TranslinkCard extends HTMLElement {
                     if(hass.states[item["entity"]].attributes.next_bus_countdown){
                         tmpcontent = tmpcontent + `
                             <div class="bus_times_header">
-                                <div class="bus_times_header_route">Route ${hass.states[item["entity"]].attributes.route_number}</div>
-                                <div class="bus_times_header_countdown">next in ${hass.states[item["entity"]].attributes.next_bus_countdown} min</div>
+                                <div class="bus_times_header_route">路線 ${hass.states[item["entity"]].attributes.route_number}</div>
+                                <div class="bus_times_header_countdown">距離下班車還有 ${hass.states[item["entity"]].attributes.next_bus_countdown} 分鐘</div>
                             </div>
                             <div class="bus_times">
                                 <div class="bus_time_icon"><ha-icon icon="mdi:bus"></ha-icon></div>
